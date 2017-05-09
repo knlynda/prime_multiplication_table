@@ -2,12 +2,13 @@ module PrimeMultiplicationTable
   # Prime contains implementation of comparable prime number.
   class Prime
     include Comparable
+    include AtkinSieve
 
     attr_reader :value
 
     def initialize(position)
       @position = position
-      @value = nth_prime(position)
+      @value = nth_prime(@position)
     end
 
     def succ
@@ -16,17 +17,6 @@ module PrimeMultiplicationTable
 
     def <=>(other)
       @value <=> other.value
-    end
-
-    def nth_prime(n)
-      return Cache[n] if Cache[n]
-      Cache.primes = compute_primes(n)
-      Cache[n]
-    end
-
-    private
-    def compute_primes(count)
-      count
     end
   end
 end

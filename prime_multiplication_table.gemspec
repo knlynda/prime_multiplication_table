@@ -11,6 +11,8 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   gem.test_files    = gem.files.grep(%r{^spec/})
   gem.require_paths = ['lib']
+  gem.bindir        = 'bin'
+  gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.homepage      = 'http://rubygems.org/gems/prime_multiplication_table'
   gem.license       = 'MIT'
 end

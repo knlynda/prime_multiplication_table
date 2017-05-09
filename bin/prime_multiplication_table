@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'prime_multiplication_table'
+require 'prime_multiplication_table_cli'
+
+PrimeMultiplicationTableCLI.run(ARGV)

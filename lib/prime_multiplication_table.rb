@@ -6,5 +6,6 @@ end
 
 require 'prime_multiplication_table/version'
 require 'prime_multiplication_table/cache'
+require 'prime_multiplication_table/atkin_sieve'
 require 'prime_multiplication_table/prime'
 require 'prime_multiplication_table/renderer'
